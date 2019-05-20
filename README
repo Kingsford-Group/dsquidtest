@@ -1,1 +1,9 @@
-Document Me!
+There are three parts of dsquidpaper
+
+- code for finding conflict structure: find_conflict_structures.py
+
+1. TCGA
+
+2. HCC
+
+3. Simulation
