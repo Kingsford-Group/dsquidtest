@@ -274,8 +274,8 @@ def add_ins(chrom_dict, ins_size, all_loc, ins_loc, begin=0, end=0, chrom=0):
     return ins_loc, all_loc
 
 if __name__ == "__main__":
-    if len(sys.argv) < 3:
-        print("!!! USAGE: python simulate_breakpoint.py <gtf> <chrom_sizes>")
+    if len(sys.argv) < 4:
+        print("!!! USAGE: python simulate_breakpoint.py <gtf> <chrom-sizes> <out-dir>")
 
     gtf_fname = sys.argv[1]
     genes_out_name = "genes_clean.bed"
@@ -283,18 +283,19 @@ if __name__ == "__main__":
     chrom_size = sys.argv[2]
     chrom_dict = read_chrom_size(chrom_size)
     num_regions = 6
+    outdir=sys.argv[3]
 
     gene_df = extract_bed(gtf_fname, genes_out_name)
 
     for num in [100,250,400]:
 
         total_sv = num
-        region_df = get_random_regions(gene_df, num_regions, "SVRNA"+str(num)+"_rep1_"+selected_out_name, out_dir,num)
+        #region_df = get_random_regions(gene_df, num_regions, "SVRNA"+str(num)+"_rep1_"+selected_out_name, out_dir,num)
 
         for rep in range(1,7):
             if rep %2 ==1:
             	# ensure that every two replicates share the same random regions to induce heterogeneity
-                region_df = get_random_regions(gene_df, num_regions, "SVRNA"+str(num)+"_rep"+str(rep)+"_"+selected_out_name, ".", num)
+                region_df = get_random_regions(gene_df, num_regions, "SVRNA"+str(num)+"_rep"+str(rep)+"_"+selected_out_name, out_dir, num)
             print("Generating SVRNA"+str(total_sv)+"_"+str(rep))
             sv_size_df = pd.read_csv("SV_sizes/sizes_"+str(total_sv*2)+"_"+str(rep)+".csv", sep="\t")
             sv_size_df = sv_size_df.sample(frac=1).reset_index(drop=True)

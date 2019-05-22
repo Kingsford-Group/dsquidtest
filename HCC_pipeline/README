@@ -1,0 +1,7 @@
+To run the entire pipeline on HCC data, run
+    bash HCC_pipeline.sh <outdir>
+
+To run only SQUID and D-SQUID, cd to the directory that is the same as <outdir> above and run
+    bash runsquid.sh
+
+*_ref/ contains annotated fusion gene and non-fusion-gene events

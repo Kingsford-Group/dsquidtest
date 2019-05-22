@@ -3,7 +3,8 @@
 #prefix=`basename ${dir} | cut -f 1 -d '_'`
 
 dir=$1
-script_dir="/home/yutongq/savanna/SQUID-simulation/true-SV-sim/scripts/"
+script_dir=$(pwd)/scripts
+mkdir -p ${dir}
 rm ${dir}/args.txt
 
 echo "getting transcript"

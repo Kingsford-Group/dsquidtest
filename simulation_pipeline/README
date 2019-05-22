@@ -1,0 +1,11 @@
+To prepare the files needed for simulation (reference, annotation, etc.), run
+    bash prepare_simulation.sh
+
+To simulate break points, run 
+    python simulate_breakpoints.py <gtf> <chrom-sizes> <out-dir>
+
+Chrom-sizes can be produced by running
+    samtools faidx <fasta> | cut -f 1,2 > chrom_sizes.txt
+
+After the break points have been simnulated, run
+    bash wrapper_pipeline.sh <out-dir> 
