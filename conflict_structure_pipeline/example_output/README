@@ -1,0 +1,11 @@
+prad_TCGA-HC-8262-01A-11R-2263-07_allpaths_edge.txt
+- output from find_conf_disc_all_paths.py
+- format:
+    - The first line: TOTAL <total number of discordant edges>
+    - Each line afterwards describes a discordant edge that is involved in conflict structure: <vertex1> <HEAD1?> <vertex2> <HEAD2>
+ 
+tcga_num_disc_conf_allpaths.txt
+- output from get_num_disc_conf.sh
+
+tcga_fraction.txt
+- output from get_fraction.sh 

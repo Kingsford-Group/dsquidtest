@@ -1,0 +1,17 @@
+MAIN_find_conf_tcga.sh
+- MAIN PROGRAM
+- USAGE: bash MAIN_find_conf_tcga.sh <outname>
+    - outname is the name of the output file that computes fraction of edges that are in conflict strucuture
+
+find_conf_disc_all_paths.py
+- for each discordant edge, determine if it is involved in conflict structure
+
+find_fraction.sh
+- Run squid and diploid-squid on all TCGA graphs. (Graphs produced by squid beforehand)
+- calls fraction_edge_in_conf.py
+ 
+fraction_edge_in_conf.py
+- computes fraction of edges that are in conflict structure for each sample
+
+get_num_disc_conf.sh
+- gets total number of discrodant edges

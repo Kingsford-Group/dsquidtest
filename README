@@ -1,9 +1,10 @@
-There are three parts of dsquidpaper
+The scripts in this git repository helps reproduce results in the following paper:
 
-- code for finding conflict structure: find_conflict_structures.py
+Detecting Transcriptomic Structural Variants in Heterogeneous Contexts via the Multiple Compatible Arrangements Problem
 
-1. TCGA
+Figure 2: TCGA dataset
+Folder: TCGA
 
-2. HCC
+Figure 3: HCC cell line
 
-3. Simulation
+Figure 4: Approxmation algorithm evaluation
