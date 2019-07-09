@@ -2,9 +2,15 @@ The scripts in this git repository helps reproduce results in the following pape
 
 Detecting Transcriptomic Structural Variants in Heterogeneous Contexts via the Multiple Compatible Arrangements Problem
 
-Figure 2: TCGA dataset
-Folder: TCGA
+## HCC dataset
+- script:`HCC_pipeline/scripts/HCC_pipeline.sh`
+- Scripts for downloading, preprocessing and running SQUID and D-SQUID on HCC are in HCC_pipeline/scripts
+- *_ref stores annotated fusion and non-fusion gene events
+- To verify detected SVs, run `python3 VerifyFusionGene.py 1 <TrueSV.bedpe> <prefix_pred.txt>`
 
-Figure 3: HCC cell line
+## Find conflict structures
+- script: `conflict_structure_pipeline/Find_conflict.sh`
 
-Figure 4: Approxmation algorithm evaluation
+## Evaluate approximation algorithms
+- script: `Approx_compare.sh`
+

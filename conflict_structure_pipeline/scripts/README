@@ -1,6 +1,6 @@
-MAIN_find_conf_tcga.sh
+MAIN: Find_conflict.sh
 - MAIN PROGRAM
-- USAGE: bash MAIN_find_conf_tcga.sh <outname>
+- USAGE: bash Find_conflict.sh <graphdir> <edgedir> <outprefix>
     - outname is the name of the output file that computes fraction of edges that are in conflict strucuture
 
 find_conf_disc_all_paths.py
